@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "Milligram-Heavy";
+        src: local("Milligram Heavy"),
+          url("/fonts/milligram/Milligram-Heavy.woff2") format("woff2");
+    }
+}
