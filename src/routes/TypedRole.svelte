@@ -14,7 +14,6 @@
     let timeToWaitAfterWordIsTyped = 2500;
     let timeToWaitAfterWordIsBackspaced = 400;
 
-
    const animate = (currentTime: number) => {
         let lastTypedDelta = currentTime - lastTyped
         let lastBackspacedDelta = currentTime - lastBackspaced
@@ -51,8 +50,9 @@
 
 </script>
 
+<p id="i-am" class="text-3xl lg:text-4xl">I'm a </p>
 <span class="flex ml-2">
-    <p id="role" class="text-4xl mr-1">{typedText}</p>
+    <p id="role" class="text-3xl lg:text-4xl mr-1">{typedText}</p>
     <div id="cursor" class={`w-1 bg-white ${shouldBlink ? 'cursor' : ''}`}></div>
 </span>
 
