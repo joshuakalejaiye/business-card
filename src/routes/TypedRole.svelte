@@ -54,7 +54,7 @@
 </script>
 
 <p id="i-am" class="text-3xl lg:text-4xl">I'm a</p>
-<span class="flex ml-2">
+<span class="flex ml-2 justify-center">
 	<p id="role" class="text-3xl lg:text-4xl mr-1">{typedText}</p>
 	<div id="cursor" class={`w-1 bg-white ${shouldBlink ? 'cursor' : ''}`} />
 </span>
