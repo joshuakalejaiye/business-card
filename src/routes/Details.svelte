@@ -9,13 +9,13 @@
 	<div id="name" class="font-milligram text-5xl lg:text-6xl">Adedayo Kalejaiye (Joshua)</div>
 	<span
 		id="role-container"
-		class="flex flex-col sm:flex-row text-center justify-center mt-4 sm:mt-1 lg:justify-normal sm:gap-3 mb-1"
+		class="flex flex-col md:flex-row text-center justify-center mt-4 md:mt-1 md:justify-normal md:gap-3 mb-1"
 	>
 		<TypedRole />
 	</span>
 	<span
 		id="links"
-		class="flex flex-wrap justify-center lg:justify-normal mt-4 sm:mt-[0] gap-2 sm:gap-5"
+		class="flex flex-wrap justify-center md:justify-normal mt-4 sm:mt-[0] gap-2 sm:gap-5"
 	>
 		<a href="http://github.com/joshuakalejaiye" class="hover:text-white" target="_blank" id="gh"
 			>GitHub</a
