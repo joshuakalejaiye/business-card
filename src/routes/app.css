@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: "Milligram-Heavy";
-        src: local("Milligram Heavy"),
-          url("/fonts/milligram/Milligram-Heavy.woff2") format("woff2");
-    }
+	@font-face {
+		font-family: 'Milligram-Heavy';
+		src: url('https://uploadthing.com/f/15afba26-1aef-44a6-9a0b-d7917af189fb_Milligram-Heavy.jpg')
+			format('woff2');
+	}
 }
