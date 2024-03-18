@@ -23,7 +23,9 @@
 		<a href="http://linkedin.com/in/joshuakalejaiye" class="hover:text-white" id="linkedin"
 			>LinkedIn</a
 		>
-		<div id="blog" class="text-[#BF8C1D]">Blog (soon...)</div>
+		<a href="https://fighter-stats.vercel.app" class="hover:text-white" id="linkedin"
+			>Fighter Stats</a
+		>
 	</span>
 </div>
 
