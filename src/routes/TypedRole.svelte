@@ -7,7 +7,8 @@
 	$: role = roles[roleIndex];
 	$: roleIndex = 0;
 	$: shouldBlink = cursorPosition === role.length || cursorPosition === 0;
-	$: typedText = role.slice(0, cursorPosition);
+	let showStaticRole = false;
+	$: typedText = showStaticRole ? roles[0] : role.slice(0, cursorPosition);
 	$: shouldBackspace = false;
 
 	let lastTyped: number = 0;
@@ -49,14 +50,18 @@
 	};
 
 	onMount(() => {
-		requestAnimationFrame(animate);
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			showStaticRole = true;
+		} else {
+			requestAnimationFrame(animate);
+		}
 	});
 </script>
 
 <p id="i-am" class="text-3xl lg:text-4xl">I'm a</p>
 <span class="flex ml-2 justify-center">
-	<p id="role" class="text-3xl lg:text-4xl mr-1">{typedText}</p>
-	<div id="cursor" class={`w-1 bg-white ${shouldBlink ? 'cursor' : ''}`} />
+	<p id="role" class="text-3xl lg:text-4xl mr-1" aria-live="polite" aria-atomic="true">{typedText}</p>
+	<div id="cursor" aria-hidden="true" class={`w-1 bg-white ${shouldBlink ? 'cursor' : ''}`} />
 </span>
 
 <style>
@@ -71,6 +76,12 @@
 	@keyframes blink {
 		to {
 			background: transparent;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#cursor {
+			display: none;
 		}
 	}
 </style>
